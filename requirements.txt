@@ -3,4 +3,3 @@ datetime
 requests_oauth2client
 requests
 openpyxl
-dotenv
