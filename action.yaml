@@ -5,6 +5,12 @@ inputs:
   action:
     description: Action to perform
     required: true
+  api-id:
+    description: OSM API ID
+    required: true
+  api-secret:
+    description: OSM API Secret
+    required: true
 
 runs:
   using: composite
@@ -18,6 +24,9 @@ runs:
       shell: bash
       env: 
         PIP_DISABLE_PIP_VERSION_CHECK: '1'
+        OSM_API_ID: ${{ inputs.api-id }}
+        OSM_API_SECRET: ${{ inputs.api-secret }}
+        OSM_BASE_URL: https://www.onlinescoutmanager.co.uk
       run:
         pip install -r requirements.txt
         python main.py
