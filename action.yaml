@@ -1,6 +1,6 @@
 name: OSM Extender
 description: Extend OSM with Automated Tasks
-
+author: 1st Nuthall Scout Group
 inputs:
   action:
     description: Action to perform
@@ -21,5 +21,3 @@ runs:
       run:
         pip install -r requirements.txt
         python main.py
-
-
