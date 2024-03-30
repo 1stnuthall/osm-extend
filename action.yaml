@@ -22,5 +22,5 @@ runs:
       env: 
         PIP_DISABLE_PIP_VERSION_CHECK: '1'
       run:
-        pip install -r requirements.txt
-        python main.py
+        pip install -r ${{ github.actions_path }}/requirements.txt
+        python ${{ github.actions_path }}/main.py
