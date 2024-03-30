@@ -1,6 +1,9 @@
 name: OSM Extender
 description: Extend OSM with Automated Tasks
 author: 1st Nuthall Scout Group
+branding: 
+  icon: octagon
+  color: purple
 inputs:
   action:
     description: Action to perform
