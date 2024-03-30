@@ -21,6 +21,6 @@ runs:
       shell: bash
       env: 
         PIP_DISABLE_PIP_VERSION_CHECK: '1'
-      run:
+      run: |
         pip install -r ${{ github.action_path }}/requirements.txt
         python ${{ github.action_path }}/main.py
