@@ -1,9 +1,7 @@
 import os
 
 from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font, Fill
-from dotenv import load_dotenv
 
-load_dotenv()
 
 OSM_API_ID     = os.environ.get("OSM_API_ID")
 OSM_API_SECRET = os.environ.get("OSM_API_SECRET")
@@ -21,7 +19,6 @@ BADGE_TYPE = {
 }
 BADGE_NAME = dict([(value, key) for key, value in BADGE_TYPE.items()])
 
-BADGE_FLEXI_NAME = os.environ.get("BADGE_FLEXI_NAME")
 
 SECTIONS = {
     # Sections to process, and the number of required activity + staging badges to complete
