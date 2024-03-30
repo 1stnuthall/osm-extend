@@ -1,0 +1,25 @@
+name: OSM Extender
+description: Extend OSM with Automated Tasks
+
+inputs:
+  action:
+    description: Action to perform
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Action
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.10
+
+    - name: Run ${{ inputs.action }}
+      shell: bash
+      env: 
+        PIP_DISABLE_PIP_VERSION_CHECK: '1'
+      run:
+        pip install -r requirements.txt
+        python main.py
+
+
