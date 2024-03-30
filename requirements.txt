@@ -1,0 +1,8 @@
+tabulate
+datetime
+requests_oauth2client
+os
+dotenv
+requests
+openpyxl
+string
