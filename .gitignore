@@ -1,7 +1,7 @@
 # Temporary Environments
 **/.env
 **/__pycache__
-**/_osm_cache_
+**/__osm__
 
 # Mac Development
 .DS_Store

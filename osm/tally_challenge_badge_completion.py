@@ -26,12 +26,12 @@ def tally_challenge_badge_completion(section):
     for badge_name, badge_data in section.badges['challenge'].items():
         record = section.get_badge_record_by_identifier(badge_data['identifier'])['items']
         completion = [['Activity','Status']]
-        for row in challenge_badges[badge_data['identifier']][1]['rows']:
-            column_name = f"({badge_name}) {row['name']}"
+        for challenge in challenge_badges[badge_data['identifier']][1]['rows']:
+            column_name = f"({badge_name}) {challenge['name']}"
             column_id = ''
-            for column in challenge_flexi_record['config']:
-                if column['name'] == column_name:
-                    column_id = column['id']
+            for scout in challenge_flexi_record['config']:
+                if scout['scoutid'] == {challenge['name']}:
+                    column_id = scout['scoutid']
                     break
             if column_id == '':
                 column_id = section.create_flexi_column(challenge_flexi_record['extraid'], column_name)

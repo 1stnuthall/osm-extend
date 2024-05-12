@@ -19,6 +19,7 @@ BADGE_TYPE = {
 }
 BADGE_NAME = dict([(value, key) for key, value in BADGE_TYPE.items()])
 
+BADGE_FLEXI_NAME = os.environ.get("BADGE_FLEXI_NAME")
 
 SECTIONS = {
     # Sections to process, and the number of required activity + staging badges to complete
